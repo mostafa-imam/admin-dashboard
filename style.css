@@ -1,0 +1,53 @@
+/* General Styles + reset */
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fs-1: 1rem;
+    --fs-2: 1.618rem;
+    --fs-3: 2.618rem;
+    --fs-4: 4.236rem;
+    --fs-5: 6.854rem;
+    --fs-6: 11.089rem;
+    --fs-small-1: 0.618rem;
+    --fs-small-2: 0.382rem;
+
+    --clr-primary: #020617;
+    --clr-secondary: #0067F6;
+    --clr-ternary: #D9E8FE;
+    --clr-shade-1: #1A1A2A;
+    --clr-shade-2: #1D76F6;
+}
+
+input, button {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
