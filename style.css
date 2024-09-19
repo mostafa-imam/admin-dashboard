@@ -14,6 +14,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    /* border: 1px solid red;    */
 }
 
 :root {
@@ -26,11 +27,11 @@ body {
     --fs-small-1: 0.618rem;
     --fs-small-2: 0.382rem;
 
-    --clr-primary: #020617;
-    --clr-secondary: #0067F6;
-    --clr-ternary: #D9E8FE;
-    --clr-shade-1: #1A1A2A;
-    --clr-shade-2: #1D76F6;
+    --clr-1: #e9ecef;
+    --clr-2: white;
+    --clr-3: #e9ecef;
+    --clr-4: #1A1A2A;
+    --clr-5: rgb(40, 125, 245);
 }
 
 input, button {
@@ -50,4 +51,111 @@ h6 {
 img {
     width: 50px;
     height: auto;
+}
+
+/* page layout Styles */
+
+.page-container {
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) 5fr;
+    grid-template-areas: 
+    'sidebar nav'
+    'sidebar main';
+    position: relative;
+    background-color: var(--clr-1);
+}
+
+.aside {
+    grid-area: sidebar;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
+
+/* Sidebar Styles */
+
+.aside {
+    display: grid;
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    background-color: white;
+    padding: 0 var(--fs-2) var(--fs-2) var(--fs-2);
+}
+
+.user-avatar-sidebar {
+    align-self: end;
+}
+
+/* controls styles */
+
+.profile-controls > div:hover,
+.setting-privacy > div:hover {
+    background-color: var(--clr-5);
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px var(--clr-5);
+}
+
+.profile-controls > div > img,
+.setting-privacy > div > img {
+    width: var(--fs-2);
+    height: auto;
+}
+
+.profile-controls > div > span,
+.setting-privacy > div > span {
+    font-size: var(--fs-1);
+    font-weight: bold;
+}
+
+.profile-controls > div,
+.setting-privacy > div {
+    display: flex;
+    gap: var(--fs-1);
+    padding: 10px;
+}
+
+/* logo section styles */
+
+.logo {
+    display: flex;
+    gap: var(--fs-1);
+    align-items: center;
+}
+
+.logo span {
+    font-size: var(--fs-3);
+    font-weight: bolder;
+}
+
+.logo > img {
+    width: var(--fs-4);
+}
+
+/* sidebar user avatar */
+
+.user-avatar-sidebar {
+    display: flex;
+    gap: var(--fs-1);
+    align-items: center;
+}
+
+.user-avatar-sidebar img {
+    border-radius: 50%;
+}
+
+.user-avatar-sidebar span p:first-child {
+    font-size: var(--fs-1);
+    font-weight: bolder;
+}
+
+.user-avatar-sidebar span p:last-child {
+    font-size: var(--fs-1);
 }
