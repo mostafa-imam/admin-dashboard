@@ -171,7 +171,6 @@ img {
 }
 
 .nav input {
-
     width: 40%;
     height: 70%;
     border: 1px solid grey;
@@ -230,7 +229,6 @@ img {
 
 .quick-actions {
     display: grid;
-    /* grid-template-columns: repeat(3, max-content); */
     gap: 5%;
 }
 
@@ -366,4 +364,44 @@ section > p {
 
 .trending > div > div > span > p:first-child {
     font-weight: bold;
+}
+
+@media (max-width: 1050px) {
+    .aside {
+        display: none;
+    }
+
+    .page-container {
+    grid-template-columns: 0fr 5fr;
+    }
+
+    .quick-actions-container {
+        padding-left: 0;
+    }
+
+    .nav input {
+        margin-left: 0;
+    }
+
+    section {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .quick-actions-container {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions-container > span {
+        display: none;
+    }    
+    
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding-right: 0;
+    }
 }
